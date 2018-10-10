@@ -1,13 +1,15 @@
 #include <hal/hal.h>
 #include "sys.h"
-#include "usart.h"	 
+ 
 
 #define PORT_UART1 1
 #define PORT_UART2 0
 #define PORT_UART3 3
 #define PORT_UART4 4
 
-#define MAX_BUF_UART_BYTES  1000
+
+#define USART_REC_LEN  			200  	//定义最大接收字节数 200
+#define EN_USART1_RX 			1		//使能（1）/禁止（0）串口1接收
 
 typedef struct UART_InitTypeDef
 {

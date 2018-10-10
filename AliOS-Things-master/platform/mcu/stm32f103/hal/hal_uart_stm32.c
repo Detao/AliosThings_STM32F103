@@ -1,6 +1,6 @@
 #include "hal_uart_stm32.h"
 #include <k_api.h>
-
+#include <stdio.h>
 void uart1_MspInit(void);
 void HAl_uart_init(UART_HandleTypeDef *uart);
 int32_t uart1_init(uart_dev_t *uart);
@@ -10,9 +10,12 @@ UART_HandleTypeDef * uart_get_handle(uint8_t port);
 /*hadle for uart*/
 UART_HandleTypeDef uart1_handle;
 
-/*bufferQueue for uart*/
-kbuf_queue_t g_buf_queue_uart1;
-char g_buf_uart1[MAX_BUF_UART_BYTES];
+extern u8 USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
+//接收状态
+//bit15，	接收完成标志
+//bit14，	接收到0x0d
+//bit13~0，	接收到的有效字节数目
+extern u16 USART_RX_STA;       //接收状态标记	
 
 /*function used to transform hal para to stm32f103 para*/
 
@@ -31,12 +34,55 @@ static int32_t uart_mode_transform(hal_uart_mode_t mode_hal, uint16_t *mode_stm3
 int32_t hal_uart_recv_II(uart_dev_t *uart, void *data, uint32_t expect_size,
                          uint32_t *recv_size, uint32_t timeout)
 {
-	return 0;
+	  uint8_t *pdata = (uint8_t *)data;
+//    UART_HandleTypeDef *handle = NULL;
+//    int i = 0;
+    uint32_t rx_count = 0;
+    int32_t ret = -1;
+    static u8 rx_read=0;
+    static u8 len =0;
+    static bool data_ready=false;
+    if ((uart == NULL) || (data == NULL)) {
+        return -1;
+    }
+
+//    handle = uart_get_handle(uart->port);
+//    if (handle == NULL) {
+//        return -1;
+//    }
+     if(!data_ready)
+     {
+	      if(USART_RX_STA&0x8000)
+		    {					   
+			      len=USART_RX_STA&0x3fff;//得到此次接收到的数据长度
+			       data_ready=true;
+			       memcpy(pdata,USART_RX_BUF+rx_read,expect_size);
+			       rx_read+=expect_size;
+			       len-=expect_size;
+			       USART_RX_STA=0;
+						(*recv_size)+=expect_size;
+							ret =0;
+      }
+		  else 
+			{
+				return -1;
+			}
+   }
+   else{
+	    memcpy(pdata,USART_RX_BUF+rx_read,expect_size);
+	    len-=expect_size;
+	    rx_read+=expect_size;
+			(*recv_size)+=expect_size;
+	    if(!len)
+	    {
+		    rx_read=0;
+		    data_ready=false;
+	     }
+			ret =0;
+    }
+	 return ret;
 }
-int32_t hal_uart_recv(uart_dev_t *uart, void *data, uint32_t expect_size, uint32_t timeout)
-{
-	return 0;
-}
+
 int32_t hal_uart_send(uart_dev_t *uart, const void *data, uint32_t size, uint32_t timeout)
 {
 	  UART_HandleTypeDef *handle = NULL;
@@ -107,11 +153,7 @@ int32_t uart1_init(uart_dev_t *uart)
      return -1;
     }
 	uart1_MspInit();
-	//uart_init(115200);
-	
 	HAl_uart_init(&uart1_handle);
-	ret = krhino_buf_queue_create(&g_buf_queue_uart1, "buf_queue_uart",
-          g_buf_uart1, MAX_BUF_UART_BYTES, 1);
 	return ret;
 }
 void uart1_MspInit()
@@ -153,25 +195,6 @@ void HAl_uart_init(UART_HandleTypeDef *uart){
   USART_ITConfig(uart->Instance, USART_IT_RXNE, ENABLE);//开启串口接受中断
   USART_Cmd(uart->Instance, ENABLE);                    //使能串口1 
 }
-void uart_init(u32 bound){
-  
-	USART_InitTypeDef USART_InitStructure;
-  
-   //USART 初始化设置
-
-	USART_InitStructure.USART_BaudRate = bound;//串口波特率
-	USART_InitStructure.USART_WordLength = USART_WordLength_8b;//字长为8位数据格式
-	USART_InitStructure.USART_StopBits = USART_StopBits_1;//一个停止位
-	USART_InitStructure.USART_Parity = USART_Parity_No;//无奇偶校验位
-	USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;//无硬件数据流控制
-	USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;	//收发模式
-
-  USART_Init(USART1, &USART_InitStructure); //初始化串口1
-  USART_ITConfig(USART1, USART_IT_RXNE, ENABLE);//开启串口接受中断
-  USART_Cmd(USART1, ENABLE);                    //使能串口1 
-
-}
-
 int32_t uart_dataWidth_transform(hal_uart_data_width_t data_width_hal,
         uint16_t *data_width_stm32f103)
 {
@@ -341,4 +364,52 @@ UART_HandleTypeDef * uart_get_handle(uint8_t port)
 
     return handle;
 }
+#if EN_USART1_RX   //如果使能了接收
+////串口1中断服务程序
+////注意,读取USARTx->SR能避免莫名其妙的错误   	
+u8 USART_RX_BUF[USART_REC_LEN];     //接收缓冲,最大USART_REC_LEN个字节.
+////接收状态
+////bit15，	接收完成标志
+////bit14，	接收到0x0d
+////bit13~0，	接收到的有效字节数目
+u16 USART_RX_STA=0;       //接收状态标记	   
 
+void USART1_IRQHandler(void)                	//串口1中断服务程序
+	{
+	u8 Res;
+
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)  //接收中断(接收到的数据必须是0x0d 0x0a结尾)
+		{
+		Res =USART_ReceiveData(USART1);	//读取接收到的数据
+		
+		if((USART_RX_STA&0x8000)==0)//接收未完成
+			{
+			if(USART_RX_STA&0x4000)//接收到了0x0d
+				{
+				if(Res!=0x0a)USART_RX_STA=0;//接收错误,重新开始
+				else 
+				{
+					USART_RX_BUF[USART_RX_STA&0X3FFF]=Res ;
+					USART_RX_STA++;
+					USART_RX_STA|=0x8000;	//接收完成了 
+				}
+        
+			}else //还没收到0X0D
+				{	
+				if(Res==0x0d)
+				{
+					USART_RX_BUF[USART_RX_STA&0X3FFF]=Res ;
+					USART_RX_STA++;
+					USART_RX_STA|=0x4000;
+				}
+				else
+					{
+					USART_RX_BUF[USART_RX_STA&0X3FFF]=Res ;
+					USART_RX_STA++;
+					if(USART_RX_STA>(USART_REC_LEN-1))USART_RX_STA=0;//接收数据错误,重新开始接收	  
+					}		 
+				}
+			}   		 
+     } 
+} 
+#endif  /*uart recive enable*/

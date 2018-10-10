@@ -37,6 +37,7 @@ static void sys_init(void)
 {
     stm32_soc_init();
     var_init();
+	  aos_cli_init();
     //aos_kernel_init(&kinit);
 	  application_start(0, NULL);
 }

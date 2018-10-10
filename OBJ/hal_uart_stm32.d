@@ -80,8 +80,6 @@
 ..\obj\hal_uart_stm32.o: ..\STM32F10x_FWLib\inc\stm32f10x_usart.h
 ..\obj\hal_uart_stm32.o: ..\STM32F10x_FWLib\inc\stm32f10x_wwdg.h
 ..\obj\hal_uart_stm32.o: ..\STM32F10x_FWLib\inc\misc.h
-..\obj\hal_uart_stm32.o: ..\SYSTEM\usart\usart.h
-..\obj\hal_uart_stm32.o: D:\Keil\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\hal_uart_stm32.o: ..\AliOS-Things-master\kernel\rhino\core\include\k_api.h
 ..\obj\hal_uart_stm32.o: D:\Keil\ARM\ARMCC\Bin\..\include\string.h
 ..\obj\hal_uart_stm32.o: ..\USER\k_config.h
@@ -117,3 +115,4 @@
 ..\obj\hal_uart_stm32.o: ..\AliOS-Things-master\kernel\rhino\core\include\k_hook.h
 ..\obj\hal_uart_stm32.o: ..\AliOS-Things-master\platform\arch\arm\armv7m\armcc\m3\port.h
 ..\obj\hal_uart_stm32.o: ..\AliOS-Things-master\kernel\rhino\core\include\k_endian.h
+..\obj\hal_uart_stm32.o: D:\Keil\ARM\ARMCC\Bin\..\include\stdio.h

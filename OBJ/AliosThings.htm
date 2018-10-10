@@ -3,7 +3,7 @@
 <title>Static Call Graph - [..\OBJ\AliosThings.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image ..\OBJ\AliosThings.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Oct 10 09:30:17 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed Oct 10 18:32:53 2018
 <BR><P>
 <H3>Maximum Stack Usage =        520 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -95,7 +95,7 @@ Function Pointers
  <LI><a href="#[5e]">Test_Task</a> from main.o(.text) referenced from main.o(.text)
  <LI><a href="#[3f]">UART4_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[40]">UART5_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
- <LI><a href="#[30]">USART1_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
+ <LI><a href="#[30]">USART1_IRQHandler</a> from hal_uart_stm32.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[31]">USART2_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[32]">USART3_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
  <LI><a href="#[35]">USBWakeUp_IRQHandler</a> from startup_stm32f10x_hd.o(.text) referenced from startup_stm32f10x_hd.o(RESET)
@@ -120,7 +120,7 @@ Function Pointers
  <LI><a href="#[57]">reboot_cmd</a> from cli.o(.text) referenced from cli.o(.constdata)
  <LI><a href="#[5a]">soc_err_proc</a> from soc_impl.o(.text) referenced from soc_impl.o(.data)
  <LI><a href="#[4f]">sys_init</a> from aos.o(.text) referenced from aos.o(.text)
- <LI><a href="#[187]">tftp_ota_thread</a> from cli.o(.text) referenced from cli.o(.text)
+ <LI><a href="#[188]">tftp_ota_thread</a> from cli.o(.text) referenced from cli.o(.text)
  <LI><a href="#[4c]">timer_task</a> from k_timer.o(.text) referenced from k_timer.o(.text)
  <LI><a href="#[58]">uptime_cmd</a> from cli.o(.text) referenced from cli.o(.constdata)
  <LI><a href="#[56]">version_cmd</a> from cli.o(.text) referenced from cli.o(.constdata)
@@ -134,25 +134,25 @@ Global Symbols
 <P><STRONG><a name="[49]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(.text)
 </UL>
-<P><STRONG><a name="[1b5]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[1b6]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[5c]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[1ac]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<P><STRONG><a name="[1ad]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Called By]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[1b6]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[1b7]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[1b7]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[1b8]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[1b8]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[1b9]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[1b9]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[1ba]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[1ba]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[1bb]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[5e]"></a>Test_Task</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104 + Unknown Stack Size
@@ -220,7 +220,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(.text)
 </UL>
-<P><STRONG><a name="[1bb]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, system_stm32f10x.o(.text), UNUSED)
+<P><STRONG><a name="[1bc]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 142 bytes, Stack size 8 bytes, system_stm32f10x.o(.text), UNUSED)
 
 <P><STRONG><a name="[68]"></a>LED_Init</STRONG> (Thumb, 68 bytes, Stack size 8 bytes, led.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = LED_Init &rArr; GPIO_Init
@@ -440,9 +440,6 @@ Global Symbols
 <P><STRONG><a name="[40]"></a>UART5_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
-<P><STRONG><a name="[30]"></a>USART1_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
-<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
-</UL>
 <P><STRONG><a name="[31]"></a>USART2_IRQHandler</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, startup_stm32f10x_hd.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
 </UL>
@@ -471,9 +468,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_MspInit
 </UL>
 
-<P><STRONG><a name="[1bc]"></a>NVIC_SetVectorTable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[1bd]"></a>NVIC_SetVectorTable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1bd]"></a>NVIC_SystemLPConfig</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
+<P><STRONG><a name="[1be]"></a>NVIC_SystemLPConfig</STRONG> (Thumb, 34 bytes, Stack size 0 bytes, misc.o(.text), UNUSED)
 
 <P><STRONG><a name="[74]"></a>SysTick_CLKSourceConfig</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, misc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
@@ -495,43 +492,43 @@ Global Symbols
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_MspInit
 </UL>
 
-<P><STRONG><a name="[1be]"></a>GPIO_StructInit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1bf]"></a>GPIO_StructInit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
 <P><STRONG><a name="[6e]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Scan
 </UL>
 
-<P><STRONG><a name="[1bf]"></a>GPIO_ReadInputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c0]"></a>GPIO_ReadInputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c0]"></a>GPIO_ReadOutputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c1]"></a>GPIO_ReadOutputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c1]"></a>GPIO_ReadOutputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c2]"></a>GPIO_ReadOutputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
 <P><STRONG><a name="[6b]"></a>GPIO_SetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_Init
 </UL>
 
-<P><STRONG><a name="[1c2]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c3]"></a>GPIO_ResetBits</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c3]"></a>GPIO_WriteBit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c4]"></a>GPIO_WriteBit</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c4]"></a>GPIO_Write</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c5]"></a>GPIO_Write</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c5]"></a>GPIO_PinLockConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c6]"></a>GPIO_PinLockConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c6]"></a>GPIO_EventOutputConfig</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c7]"></a>GPIO_EventOutputConfig</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c7]"></a>GPIO_EventOutputCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c8]"></a>GPIO_EventOutputCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c8]"></a>GPIO_PinRemapConfig</STRONG> (Thumb, 138 bytes, Stack size 20 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1c9]"></a>GPIO_PinRemapConfig</STRONG> (Thumb, 138 bytes, Stack size 20 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1c9]"></a>GPIO_EXTILineConfig</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1ca]"></a>GPIO_EXTILineConfig</STRONG> (Thumb, 66 bytes, Stack size 12 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ca]"></a>GPIO_ETH_MediaInterfaceConfig</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
+<P><STRONG><a name="[1cb]"></a>GPIO_ETH_MediaInterfaceConfig</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[1cb]"></a>RCC_DeInit</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1cc]"></a>RCC_DeInit</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1cc]"></a>RCC_HSEConfig</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1cd]"></a>RCC_HSEConfig</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[7a]"></a>RCC_GetFlagStatus</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, stm32f10x_rcc.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_WaitForHSEStartUp
@@ -541,37 +538,37 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetFlagStatus
 </UL>
 
-<P><STRONG><a name="[1cd]"></a>RCC_AdjustHSICalibrationValue</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1ce]"></a>RCC_AdjustHSICalibrationValue</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ce]"></a>RCC_HSICmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1cf]"></a>RCC_HSICmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1cf]"></a>RCC_PLLConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d0]"></a>RCC_PLLConfig</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d0]"></a>RCC_PLLCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d1]"></a>RCC_PLLCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d1]"></a>RCC_SYSCLKConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d2]"></a>RCC_SYSCLKConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d2]"></a>RCC_GetSYSCLKSource</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d3]"></a>RCC_GetSYSCLKSource</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d3]"></a>RCC_HCLKConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d4]"></a>RCC_HCLKConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d4]"></a>RCC_PCLK1Config</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d5]"></a>RCC_PCLK1Config</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d5]"></a>RCC_PCLK2Config</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d6]"></a>RCC_PCLK2Config</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d6]"></a>RCC_ITConfig</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d7]"></a>RCC_ITConfig</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d7]"></a>RCC_USBCLKConfig</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d8]"></a>RCC_USBCLKConfig</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d8]"></a>RCC_ADCCLKConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1d9]"></a>RCC_ADCCLKConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1d9]"></a>RCC_LSEConfig</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1da]"></a>RCC_LSEConfig</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1da]"></a>RCC_LSICmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1db]"></a>RCC_LSICmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1db]"></a>RCC_RTCCLKConfig</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1dc]"></a>RCC_RTCCLKConfig</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1dc]"></a>RCC_RTCCLKCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1dd]"></a>RCC_RTCCLKCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[7e]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 192 bytes, Stack size 12 bytes, stm32f10x_rcc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = RCC_GetClocksFreq
@@ -579,7 +576,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
 </UL>
 
-<P><STRONG><a name="[1dd]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1de]"></a>RCC_AHBPeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[69]"></a>RCC_APB2PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;KEY_Init
@@ -587,7 +584,7 @@ Global Symbols
 <LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_MspInit
 </UL>
 
-<P><STRONG><a name="[1de]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1df]"></a>RCC_APB1PeriphClockCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[77]"></a>RCC_APB2PeriphResetCmd</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 <BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DeInit
@@ -599,17 +596,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_DeInit
 </UL>
 
-<P><STRONG><a name="[1df]"></a>RCC_BackupResetCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1e0]"></a>RCC_BackupResetCmd</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e0]"></a>RCC_ClockSecuritySystemCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1e1]"></a>RCC_ClockSecuritySystemCmd</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e1]"></a>RCC_MCOConfig</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1e2]"></a>RCC_MCOConfig</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e2]"></a>RCC_ClearFlag</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1e3]"></a>RCC_ClearFlag</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e3]"></a>RCC_GetITStatus</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1e4]"></a>RCC_GetITStatus</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e4]"></a>RCC_ClearITPendingBit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
+<P><STRONG><a name="[1e5]"></a>RCC_ClearITPendingBit</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32f10x_rcc.o(.text), UNUSED)
 
 <P><STRONG><a name="[7b]"></a>USART_DeInit</STRONG> (Thumb, 134 bytes, Stack size 8 bytes, stm32f10x_usart.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB1PeriphResetCmd
@@ -621,43 +618,42 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAl_uart_init
+<BR>[Called By]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAl_uart_init
 </UL>
 
-<P><STRONG><a name="[1e5]"></a>USART_StructInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1e6]"></a>USART_StructInit</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e6]"></a>USART_ClockInit</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1e7]"></a>USART_ClockInit</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e7]"></a>USART_ClockStructInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1e8]"></a>USART_ClockStructInit</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
 <P><STRONG><a name="[195]"></a>USART_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAl_uart_init
+<BR><BR>[Called By]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAl_uart_init
 </UL>
 
 <P><STRONG><a name="[194]"></a>USART_ITConfig</STRONG> (Thumb, 74 bytes, Stack size 20 bytes, stm32f10x_usart.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = USART_ITConfig
 </UL>
-<BR>[Called By]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_init
-<LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAl_uart_init
+<BR>[Called By]<UL><LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAl_uart_init
 </UL>
 
-<P><STRONG><a name="[1e8]"></a>USART_DMACmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1e9]"></a>USART_DMACmd</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1e9]"></a>USART_SetAddress</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1ea]"></a>USART_SetAddress</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ea]"></a>USART_WakeUpConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1eb]"></a>USART_WakeUpConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1eb]"></a>USART_ReceiverWakeUpCmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1ec]"></a>USART_ReceiverWakeUpCmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ec]"></a>USART_LINBreakDetectLengthConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1ed]"></a>USART_LINBreakDetectLengthConfig</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ed]"></a>USART_LINCmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1ee]"></a>USART_LINCmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ee]"></a>USART_SendData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1ef]"></a>USART_SendData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ef]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[19f]"></a>USART_ReceiveData</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
+</UL>
 
 <P><STRONG><a name="[1f0]"></a>USART_SendBreak</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
@@ -683,13 +679,17 @@ Global Symbols
 
 <P><STRONG><a name="[1fb]"></a>USART_ClearFlag</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1fc]"></a>USART_GetITStatus</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[19e]"></a>USART_GetITStatus</STRONG> (Thumb, 84 bytes, Stack size 16 bytes, stm32f10x_usart.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = USART_GetITStatus
+</UL>
+<BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_IRQHandler
+</UL>
 
-<P><STRONG><a name="[1fd]"></a>USART_ClearITPendingBit</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, stm32f10x_usart.o(.text), UNUSED)
+<P><STRONG><a name="[1fc]"></a>USART_ClearITPendingBit</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, stm32f10x_usart.o(.text), UNUSED)
 
-<P><STRONG><a name="[1fe]"></a>aos_reboot</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
+<P><STRONG><a name="[1fd]"></a>aos_reboot</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
 
-<P><STRONG><a name="[1ff]"></a>aos_get_hz</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
+<P><STRONG><a name="[1fe]"></a>aos_get_hz</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
 
 <P><STRONG><a name="[5f]"></a>aos_version_get</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, aos_rhino.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Test1_Task
@@ -712,7 +712,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_task_dyn_create
 </UL>
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;application_start
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 </UL>
 
 <P><STRONG><a name="[81]"></a>aos_task_exit</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, aos_rhino.o(.text))
@@ -721,7 +721,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_task_dyn_del
 </UL>
-<BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tftp_ota_thread
+<BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tftp_ota_thread
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_main
 </UL>
 
@@ -729,9 +729,9 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_cur_task_get
 </UL>
 
-<P><STRONG><a name="[200]"></a>aos_task_key_create</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
+<P><STRONG><a name="[1ff]"></a>aos_task_key_create</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
 
-<P><STRONG><a name="[201]"></a>aos_task_key_delete</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
+<P><STRONG><a name="[200]"></a>aos_task_key_delete</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
 
 <P><STRONG><a name="[85]"></a>aos_task_setspecific</STRONG> (Thumb, 388 bytes, Stack size 24 bytes, aos_rhino.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_task_info_set
@@ -758,12 +758,15 @@ Global Symbols
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_sem_new
 <LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_mutex_free
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_mutex_new
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_main
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 </UL>
 
-<P><STRONG><a name="[8b]"></a>aos_malloc</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, aos_rhino.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_owner_attach
+<P><STRONG><a name="[8b]"></a>aos_malloc</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, aos_rhino.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 280 + Unknown Stack Size
+<LI>Call Chain = aos_malloc &rArr; krhino_mm_alloc &rArr; dumpsys_mm_info_func &rArr; dump_kmm_map &rArr; print_block &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_owner_attach
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_mm_alloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_work_init
@@ -771,11 +774,14 @@ Global Symbols
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_queue_new
 <LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_sem_new
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_mutex_new
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 </UL>
 
-<P><STRONG><a name="[8e]"></a>aos_mutex_new</STRONG> (Thumb, 398 bytes, Stack size 16 bytes, aos_rhino.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_mutex_create
+<P><STRONG><a name="[8e]"></a>aos_mutex_new</STRONG> (Thumb, 398 bytes, Stack size 16 bytes, aos_rhino.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 296 + Unknown Stack Size
+<LI>Call Chain = aos_mutex_new &rArr; aos_malloc &rArr; krhino_mm_alloc &rArr; dumpsys_mm_info_func &rArr; dump_kmm_map &rArr; print_block &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_mutex_create
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_malloc
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_free
 </UL>
@@ -807,7 +813,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
 </UL>
 
-<P><STRONG><a name="[202]"></a>aos_mutex_is_valid</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
+<P><STRONG><a name="[201]"></a>aos_mutex_is_valid</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
 
 <P><STRONG><a name="[97]"></a>aos_sem_new</STRONG> (Thumb, 408 bytes, Stack size 24 bytes, aos_rhino.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_sem_create
@@ -829,7 +835,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_sem_give
 </UL>
 
-<P><STRONG><a name="[203]"></a>aos_sem_is_valid</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
+<P><STRONG><a name="[202]"></a>aos_sem_is_valid</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, aos_rhino.o(.text), UNUSED)
 
 <P><STRONG><a name="[9f]"></a>aos_sem_signal_all</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, aos_rhino.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_sem_give_all
@@ -984,7 +990,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
+<BR>[Called By]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
 </UL>
 
 <P><STRONG><a name="[d4]"></a>aos_start</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, aos_rhino.o(.text))
@@ -993,7 +999,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_start
 </UL>
-<BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
+<BR>[Called By]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
 </UL>
 
 <P><STRONG><a name="[bf]"></a>krhino_workqueue_create</STRONG> (Thumb, 242 bytes, Stack size 56 bytes, k_workqueue.o(.text))
@@ -1229,7 +1235,7 @@ Global Symbols
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_init
 <LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dyn_mem_proc_task_start
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ktimer_init
-<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
+<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
 </UL>
 
 <P><STRONG><a name="[fd]"></a>task_dyn_create</STRONG> (Thumb, 154 bytes, Stack size 88 bytes, k_task.o(.text))
@@ -1314,7 +1320,7 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task_resume
 </UL>
 
-<P><STRONG><a name="[204]"></a>krhino_task_stack_min_free</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, k_task.o(.text), UNUSED)
+<P><STRONG><a name="[203]"></a>krhino_task_stack_min_free</STRONG> (Thumb, 60 bytes, Stack size 12 bytes, k_task.o(.text), UNUSED)
 
 <P><STRONG><a name="[106]"></a>krhino_task_stack_cur_free</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, k_task.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;soc_get_cur_sp
@@ -1482,9 +1488,9 @@ Global Symbols
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cpu_intrpt_restore
 </UL>
 
-<P><STRONG><a name="[205]"></a>krhino_global_space_get</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, k_sys.o(.text), UNUSED)
+<P><STRONG><a name="[204]"></a>krhino_global_space_get</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, k_sys.o(.text), UNUSED)
 
-<P><STRONG><a name="[206]"></a>krhino_version_get</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, k_sys.o(.text), UNUSED)
+<P><STRONG><a name="[205]"></a>krhino_version_get</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, k_sys.o(.text), UNUSED)
 
 <P><STRONG><a name="[118]"></a>kobj_list_init</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, k_stats.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = kobj_list_init
@@ -1821,16 +1827,22 @@ Global Symbols
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_buf_queue_recv
 </UL>
 
-<P><STRONG><a name="[13c]"></a>mutex_create</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, k_mutex.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cpu_intrpt_save
+<P><STRONG><a name="[13c]"></a>mutex_create</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, k_mutex.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24 + Unknown Stack Size
+<LI>Call Chain = mutex_create
+</UL>
+<BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cpu_intrpt_save
 <LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cpu_intrpt_restore
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_mutex_create
 <LI><a href="#[140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_mutex_dyn_create
 </UL>
 
-<P><STRONG><a name="[8f]"></a>krhino_mutex_create</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, k_mutex.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mutex_create
+<P><STRONG><a name="[8f]"></a>krhino_mutex_create</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, k_mutex.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
+<LI>Call Chain = krhino_mutex_create &rArr; mutex_create
+</UL>
+<BR>[Calls]<UL><LI><a href="#[13c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mutex_create
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_mutex_new
 </UL>
@@ -2271,14 +2283,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_init
 </UL>
 
-<P><STRONG><a name="[aa]"></a>krhino_buf_queue_create</STRONG> (Thumb, 40 bytes, Stack size 40 bytes, k_buf_queue.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 100 + Unknown Stack Size
-<LI>Call Chain = krhino_buf_queue_create &rArr; buf_queue_create &rArr; ringbuf_init
-</UL>
-<BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_queue_create
+<P><STRONG><a name="[aa]"></a>krhino_buf_queue_create</STRONG> (Thumb, 40 bytes, Stack size 40 bytes, k_buf_queue.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[166]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_queue_create
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_queue_new
-<LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 </UL>
 
 <P><STRONG><a name="[ed]"></a>krhino_fix_buf_queue_create</STRONG> (Thumb, 44 bytes, Stack size 40 bytes, k_buf_queue.o(.text))
@@ -2525,8 +2533,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;soc_err_proc
 </UL>
 
-<P><STRONG><a name="[179]"></a>aos_heap_set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, soc_impl.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
+<P><STRONG><a name="[17a]"></a>aos_heap_set</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, soc_impl.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
 </UL>
 
 <P><STRONG><a name="[107]"></a>soc_get_cur_sp</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, soc_impl.o(.text))
@@ -2544,8 +2552,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> soc_impl.o(.data)
 </UL>
 <P><STRONG><a name="[172]"></a>stm32_soc_init</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, soc_init.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148 + Unknown Stack Size
-<LI>Call Chain = stm32_soc_init &rArr; uart2_init &rArr; hal_uart_init &rArr; uart1_init &rArr; krhino_buf_queue_create &rArr; buf_queue_create &rArr; ringbuf_init
+<BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = stm32_soc_init &rArr; uart2_init &rArr; hal_uart_init &rArr; uart1_init &rArr; HAl_uart_init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[173]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_PriorityGroupConfig
 <LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_init
@@ -2572,18 +2579,18 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 336 + Unknown Stack Size
 <LI>Call Chain = main &rArr; sys_start &rArr; aos_init &rArr; krhino_init &rArr; workqueue_init &rArr; krhino_workqueue_create &rArr; krhino_task_create &rArr; task_create &rArr; ready_list_add_tail &rArr; ready_list_init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
+<BR>[Calls]<UL><LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_start
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[17d]"></a>cli_putstr</STRONG> (Thumb, 52 bytes, Stack size 32 bytes, cli.o(.text))
+<P><STRONG><a name="[17e]"></a>cli_putstr</STRONG> (Thumb, 52 bytes, Stack size 32 bytes, cli.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = cli_putstr &rArr; hal_uart_send
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_send
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
+<BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
 </UL>
 
 <P><STRONG><a name="[143]"></a>aos_cli_get_tag</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, cli.o(.text))
@@ -2593,7 +2600,6 @@ Global Symbols
 <LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_kmm_free_map
 <LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_block
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_cmd
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uptime_cmd
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reboot_cmd
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;devname_cmd
@@ -2601,21 +2607,22 @@ Global Symbols
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;version_cmd
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;help_cmd
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_main
-<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_bad_command
-<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
+<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_bad_command
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 </UL>
 
-<P><STRONG><a name="[183]"></a>cli_getchar</STRONG> (Thumb, 62 bytes, Stack size 40 bytes, cli.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = cli_getchar &rArr; hal_uart_recv_II
+<P><STRONG><a name="[184]"></a>cli_getchar</STRONG> (Thumb, 62 bytes, Stack size 40 bytes, cli.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = cli_getchar &rArr; hal_uart_recv_II &rArr; __aeabi_memcpy
 </UL>
 <BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_recv_II
 </UL>
-<BR>[Called By]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
+<BR>[Called By]<UL><LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
 </UL>
 
-<P><STRONG><a name="[187]"></a>tftp_ota_thread</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, cli.o(.text))
+<P><STRONG><a name="[188]"></a>tftp_ota_thread</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, cli.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = tftp_ota_thread &rArr; aos_task_exit &rArr; krhino_task_dyn_del &rArr; krhino_sem_give &rArr; sem_give &rArr; pend_task_wakeup &rArr; ready_list_add &rArr; ready_list_add_tail &rArr; ready_list_init
 </UL>
@@ -2623,38 +2630,47 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cli.o(.text)
 </UL>
-<P><STRONG><a name="[18b]"></a>aos_cli_register_command</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, cli.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_register_commands
+<P><STRONG><a name="[18c]"></a>aos_cli_register_command</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, cli.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = aos_cli_register_command
+</UL>
+<BR>[Called By]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_register_commands
 </UL>
 
-<P><STRONG><a name="[188]"></a>aos_cli_unregister_command</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, cli.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memmove4
+<P><STRONG><a name="[189]"></a>aos_cli_unregister_command</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, cli.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memmove4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_unregister_commands
+<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_unregister_commands
 </UL>
 
-<P><STRONG><a name="[18a]"></a>aos_cli_register_commands</STRONG> (Thumb, 440 bytes, Stack size 20 bytes, cli.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_register_command
+<P><STRONG><a name="[18b]"></a>aos_cli_register_commands</STRONG> (Thumb, 440 bytes, Stack size 20 bytes, cli.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = aos_cli_register_commands &rArr; aos_cli_register_command
+</UL>
+<BR>[Calls]<UL><LI><a href="#[18c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_register_command
 </UL>
 <BR>[Called By]<UL><LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_cli_init
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 </UL>
 
-<P><STRONG><a name="[18c]"></a>aos_cli_unregister_commands</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, cli.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_unregister_command
+<P><STRONG><a name="[18d]"></a>aos_cli_unregister_commands</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, cli.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_unregister_command
 </UL>
 
-<P><STRONG><a name="[207]"></a>aos_cli_stop</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, cli.o(.text), UNUSED)
+<P><STRONG><a name="[206]"></a>aos_cli_stop</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, cli.o(.text), UNUSED)
 
-<P><STRONG><a name="[18d]"></a>aos_cli_init</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, cli.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_malloc
+<P><STRONG><a name="[178]"></a>aos_cli_init</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, cli.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 512 + Unknown Stack Size
+<LI>Call Chain = aos_cli_init &rArr; aos_task_new_ext &rArr; krhino_task_dyn_create &rArr; task_dyn_create &rArr; krhino_mm_alloc &rArr; dumpsys_mm_info_func &rArr; dump_kmm_map &rArr; print_block &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
+</UL>
+<BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_malloc
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_free
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_task_new_ext
 <LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
 <LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_get_tag
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[18e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_cli_init
-<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_register_commands
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_register_commands
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_init
 </UL>
 
 <P><STRONG><a name="[144]"></a>csp_printf</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, log.o(.text))
@@ -2671,7 +2687,6 @@ Global Symbols
 <LI><a href="#[145]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dump_kmm_free_map
 <LI><a href="#[142]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_block
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_cmd
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uptime_cmd
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;reboot_cmd
 <LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;devname_cmd
@@ -2679,35 +2694,39 @@ Global Symbols
 <LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;version_cmd
 <LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;help_cmd
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_main
-<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_bad_command
-<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
+<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_bad_command
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 </UL>
 
 <P><STRONG><a name="[190]"></a>aos_set_log_level</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, log.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_cmd
 </UL>
 
-<P><STRONG><a name="[18e]"></a>log_cli_init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, log.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_mutex_new
-<LI><a href="#[18a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_register_commands
+<P><STRONG><a name="[18e]"></a>log_cli_init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, log.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 304 + Unknown Stack Size
+<LI>Call Chain = log_cli_init &rArr; aos_mutex_new &rArr; aos_malloc &rArr; krhino_mm_alloc &rArr; dumpsys_mm_info_func &rArr; dump_kmm_map &rArr; print_block &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
 </UL>
-<BR>[Called By]<UL><LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_mutex_new
+<LI><a href="#[18b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_register_commands
+</UL>
+<BR>[Called By]<UL><LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 </UL>
 
 <P><STRONG><a name="[191]"></a>log_no_cli_init</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, log.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_mutex_new
 </UL>
 
-<P><STRONG><a name="[176]"></a>hal_uart_recv_II</STRONG> (Thumb, 10 bytes, Stack size 12 bytes, hal_uart_stm32.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = hal_uart_recv_II
+<P><STRONG><a name="[176]"></a>hal_uart_recv_II</STRONG> (Thumb, 192 bytes, Stack size 40 bytes, hal_uart_stm32.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = hal_uart_recv_II &rArr; __aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_getchar
+<BR>[Calls]<UL><LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_getchar
 <LI><a href="#[175]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fgetc
 </UL>
-
-<P><STRONG><a name="[208]"></a>hal_uart_recv</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, hal_uart_stm32.o(.text), UNUSED)
 
 <P><STRONG><a name="[192]"></a>uart_get_handle</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, hal_uart_stm32.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[174]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_send
@@ -2718,7 +2737,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[192]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_get_handle
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_putstr
+<BR>[Called By]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_putstr
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fputc
 </UL>
 
@@ -2742,12 +2761,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 </UL>
 
-<P><STRONG><a name="[198]"></a>uart1_init</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, hal_uart_stm32.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 116 + Unknown Stack Size
-<LI>Call Chain = uart1_init &rArr; krhino_buf_queue_create &rArr; buf_queue_create &rArr; ringbuf_init
+<P><STRONG><a name="[198]"></a>uart1_init</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, hal_uart_stm32.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = uart1_init &rArr; HAl_uart_init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
-<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_buf_queue_create
-<LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_MspInit
+<BR>[Calls]<UL><LI><a href="#[196]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_MspInit
 <LI><a href="#[193]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAl_uart_init
 <LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_dataWidth_transform
 <LI><a href="#[19a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart_parity_transform
@@ -2759,34 +2776,35 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[171]"></a>hal_uart_init</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, hal_uart_stm32.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 132 + Unknown Stack Size
-<LI>Call Chain = hal_uart_init &rArr; uart1_init &rArr; krhino_buf_queue_create &rArr; buf_queue_create &rArr; ringbuf_init
+<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = hal_uart_init &rArr; uart1_init &rArr; HAl_uart_init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[170]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart2_init
 </UL>
 
-<P><STRONG><a name="[19e]"></a>uart_init</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, hal_uart_stm32.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[194]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
-<LI><a href="#[195]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Cmd
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_Init
+<P><STRONG><a name="[30]"></a>USART1_IRQHandler</STRONG> (Thumb, 166 bytes, Stack size 8 bytes, hal_uart_stm32.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USART1_IRQHandler &rArr; USART_GetITStatus
 </UL>
-
+<BR>[Calls]<UL><LI><a href="#[19e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_GetITStatus
+<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ReceiveData
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f10x_hd.o(RESET)
+</UL>
 <P><STRONG><a name="[f0]"></a>__aeabi_uldivmod</STRONG> (Thumb, 98 bytes, Stack size 40 bytes, uldiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __aeabi_uldivmod
 </UL>
-<BR>[Calls]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<BR>[Calls]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_sys_time_get
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_ms_to_ticks
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_ticks_to_ms
-<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
-<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[209]"></a>___aeabi_memcpy8$move</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, memmovea.o(.text), UNUSED)
+<P><STRONG><a name="[207]"></a>___aeabi_memcpy8$move</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, memmovea.o(.text), UNUSED)
 
 <P><STRONG><a name="[136]"></a>__aeabi_memcpy</STRONG> (Thumb, 64 bytes, Stack size 8 bytes, memmovea.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_memcpy
@@ -2794,8 +2812,9 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[15d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;k_mm_realloc
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ringbuf_pop
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ringbuf_push
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
-<LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+<LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_recv_II
 <LI><a href="#[16b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;buf_queue_send
 </UL>
 
@@ -2806,25 +2825,25 @@ Global Symbols
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;dyn_mem_proc_task
 </UL>
 
-<P><STRONG><a name="[20a]"></a>__aeabi_memmove</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, memmovea.o(.text), UNUSED)
+<P><STRONG><a name="[208]"></a>__aeabi_memmove</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, memmovea.o(.text), UNUSED)
 
-<P><STRONG><a name="[189]"></a>__aeabi_memmove4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, memmovea.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[188]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_unregister_command
+<P><STRONG><a name="[18a]"></a>__aeabi_memmove4</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, memmovea.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[189]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_unregister_command
 </UL>
 
-<P><STRONG><a name="[20b]"></a>__aeabi_memmove8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, memmovea.o(.text), UNUSED)
+<P><STRONG><a name="[209]"></a>__aeabi_memmove8</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, memmovea.o(.text), UNUSED)
 
-<P><STRONG><a name="[1a1]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
+<P><STRONG><a name="[1a2]"></a>__aeabi_memset</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, memseta.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_memset$wrapper
 <LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 
-<P><STRONG><a name="[20c]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[20a]"></a>__aeabi_memset4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[20d]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[20b]"></a>__aeabi_memset8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
 <P><STRONG><a name="[ca]"></a>__aeabi_memclr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, memseta.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<BR><BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_zalloc
 <LI><a href="#[153]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_add_mm_region
@@ -2835,155 +2854,155 @@ Global Symbols
 <LI><a href="#[15c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_deinit_mm_head
 <LI><a href="#[15a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_init_mm_head
 <LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;task_create
-<LI><a href="#[18d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
-<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_getchar
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_putstr
-<LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
+<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_getchar
+<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_putstr
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 </UL>
 
-<P><STRONG><a name="[20e]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
+<P><STRONG><a name="[20c]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memseta.o(.text), UNUSED)
 
-<P><STRONG><a name="[1a2]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
+<P><STRONG><a name="[1a3]"></a>_memset$wrapper</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, memseta.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memset
 </UL>
 
-<P><STRONG><a name="[185]"></a>strncpy</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, strncpy.o(.text))
+<P><STRONG><a name="[186]"></a>strncpy</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, strncpy.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strncpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_main
-<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
 </UL>
 
-<P><STRONG><a name="[180]"></a>strchr</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, strchr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
+<P><STRONG><a name="[181]"></a>strchr</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, strchr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
 </UL>
 
-<P><STRONG><a name="[17e]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<P><STRONG><a name="[17f]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_cmd
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_putstr
+<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_putstr
 <LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_main
-<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
-<LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
 </UL>
 
-<P><STRONG><a name="[17c]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
+<P><STRONG><a name="[17d]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;echo_cmd
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lookup_command
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lookup_command
 </UL>
 
-<P><STRONG><a name="[17b]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
+<P><STRONG><a name="[17c]"></a>strncmp</STRONG> (Thumb, 30 bytes, Stack size 12 bytes, strncmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = strncmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;log_cmd
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lookup_command
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lookup_command
 </UL>
 
-<P><STRONG><a name="[20f]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[20d]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
 
-<P><STRONG><a name="[1b4]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[1b5]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1a0]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
+<P><STRONG><a name="[1a1]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[210]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[20e]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
-<P><STRONG><a name="[19f]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
+<P><STRONG><a name="[1a0]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
 </UL>
 
-<P><STRONG><a name="[211]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[20f]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
-<P><STRONG><a name="[212]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[210]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 48 bytes, iusefp.o(.text), UNUSED)
 
-<P><STRONG><a name="[1a3]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
-<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
-<LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<P><STRONG><a name="[1a4]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_lasr
+<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
-<LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-</UL>
-
-<P><STRONG><a name="[1a7]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Called By]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
+<LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
+<LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[1a8]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[1a8]"></a>__aeabi_dsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[1a9]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-</UL>
-<BR>[Called By]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[1a9]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[1aa]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<P><STRONG><a name="[1aa]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
-</UL>
-
-<P><STRONG><a name="[1ab]"></a>__aeabi_d2ulz</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, dfixul.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
-</UL>
-<BR>[Called By]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<BR>[Called By]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
-<P><STRONG><a name="[1b1]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<P><STRONG><a name="[1ab]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[1ac]"></a>__aeabi_d2ulz</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, dfixul.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+</UL>
+
+<P><STRONG><a name="[1b2]"></a>__aeabi_cdrcmple</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, cdrcmple.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
 
 <P><STRONG><a name="[5d]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<BR><BR>[Calls]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[213]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[211]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[1a4]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[1a5]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[214]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[212]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
-<P><STRONG><a name="[1a6]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
-<LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<P><STRONG><a name="[1a7]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[1a5]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, depilogue.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
-<LI><a href="#[19f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
-<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
+<P><STRONG><a name="[1a6]"></a>_double_epilogue</STRONG> (Thumb, 156 bytes, Stack size 32 bytes, depilogue.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
+<LI><a href="#[1a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<LI><a href="#[1a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-</UL>
-
-<P><STRONG><a name="[1ad]"></a>__0printf</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[215]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[1ae]"></a>__0printf</STRONG> (Thumb, 22 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[213]"></a>__1printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
 <P><STRONG><a name="[60]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = __2printf
@@ -2998,29 +3017,29 @@ Global Symbols
 <LI><a href="#[16e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;soc_print_stack
 </UL>
 
-<P><STRONG><a name="[216]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[214]"></a>__c89printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[217]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
+<P><STRONG><a name="[215]"></a>printf</STRONG> (Thumb, 0 bytes, Stack size 24 bytes, printfa.o(i.__0printf), UNUSED)
 
-<P><STRONG><a name="[1af]"></a>__0vprintf</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[1b0]"></a>__0vprintf</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[218]"></a>__1vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
+<P><STRONG><a name="[216]"></a>__1vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
 
-<P><STRONG><a name="[219]"></a>__2vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
+<P><STRONG><a name="[217]"></a>__2vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
 
-<P><STRONG><a name="[21a]"></a>__c89vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
+<P><STRONG><a name="[218]"></a>__c89vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf), UNUSED)
 
 <P><STRONG><a name="[18f]"></a>vprintf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfa.o(i.__0vprintf))
 <BR><BR>[Called By]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
 </UL>
 
-<P><STRONG><a name="[21b]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[219]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[21c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[21a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[21d]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[21b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
@@ -3483,8 +3502,7 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[170]"></a>uart2_init</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, soc_init.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 140 + Unknown Stack Size
-<LI>Call Chain = uart2_init &rArr; hal_uart_init &rArr; uart1_init &rArr; krhino_buf_queue_create &rArr; buf_queue_create &rArr; ringbuf_init
+<BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = uart2_init &rArr; hal_uart_init &rArr; uart1_init &rArr; HAl_uart_init &rArr; USART_Init &rArr; RCC_GetClocksFreq
 </UL>
 <BR>[Calls]<UL><LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hal_uart_init
 </UL>
@@ -3495,90 +3513,91 @@ Local Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sys_init
 </UL>
 
-<P><STRONG><a name="[4f]"></a>sys_init</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, aos.o(.text))
+<P><STRONG><a name="[4f]"></a>sys_init</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, aos.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 520 + Unknown Stack Size
 <LI>Call Chain = sys_init &rArr; application_start &rArr; aos_task_new_ext &rArr; krhino_task_dyn_create &rArr; task_dyn_create &rArr; krhino_mm_alloc &rArr; dumpsys_mm_info_func &rArr; dump_kmm_map &rArr; print_block &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;application_start
+<LI><a href="#[178]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_init
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;var_init
 <LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stm32_soc_init
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> aos.o(.text)
 </UL>
-<P><STRONG><a name="[178]"></a>sys_start</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, aos.o(.text))
+<P><STRONG><a name="[179]"></a>sys_start</STRONG> (Thumb, 56 bytes, Stack size 32 bytes, aos.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 328 + Unknown Stack Size
 <LI>Call Chain = sys_start &rArr; aos_init &rArr; krhino_init &rArr; workqueue_init &rArr; krhino_workqueue_create &rArr; krhino_task_create &rArr; task_create &rArr; ready_list_add_tail &rArr; ready_list_init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_start
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_init
 <LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;krhino_task_create
-<LI><a href="#[179]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_heap_set
+<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_heap_set
 </UL>
 <BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[17a]"></a>lookup_command</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, cli.o(.text))
+<P><STRONG><a name="[17b]"></a>lookup_command</STRONG> (Thumb, 128 bytes, Stack size 24 bytes, cli.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = lookup_command &rArr; strncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
+<BR>[Called By]<UL><LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
 </UL>
 
-<P><STRONG><a name="[17f]"></a>proc_onecmd</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, cli.o(.text))
+<P><STRONG><a name="[180]"></a>proc_onecmd</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, cli.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200 + Unknown Stack Size
 <LI>Call Chain = proc_onecmd &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strchr
+<LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strchr
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
-<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_putstr
-<LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lookup_command
+<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_putstr
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;lookup_command
 </UL>
-<BR>[Called By]<UL><LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+<BR>[Called By]<UL><LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
 </UL>
 
-<P><STRONG><a name="[181]"></a>handle_input</STRONG> (Thumb, 584 bytes, Stack size 56 bytes, cli.o(.text))
+<P><STRONG><a name="[182]"></a>handle_input</STRONG> (Thumb, 584 bytes, Stack size 56 bytes, cli.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 256 + Unknown Stack Size
 <LI>Call Chain = handle_input &rArr; proc_onecmd &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
 </UL>
-<BR>[Calls]<UL><LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
-<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;proc_onecmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_main
 </UL>
 
-<P><STRONG><a name="[182]"></a>tab_complete</STRONG> (Thumb, 300 bytes, Stack size 32 bytes, cli.o(.text))
+<P><STRONG><a name="[183]"></a>tab_complete</STRONG> (Thumb, 300 bytes, Stack size 32 bytes, cli.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208 + Unknown Stack Size
 <LI>Call Chain = tab_complete &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
 <LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_get_tag
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
-<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
+<BR>[Called By]<UL><LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
 </UL>
 
-<P><STRONG><a name="[184]"></a>get_input</STRONG> (Thumb, 764 bytes, Stack size 32 bytes, cli.o(.text))
+<P><STRONG><a name="[185]"></a>get_input</STRONG> (Thumb, 764 bytes, Stack size 32 bytes, cli.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240 + Unknown Stack Size
 <LI>Call Chain = get_input &rArr; tab_complete &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
 </UL>
 <BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
 <LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_get_tag
-<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
-<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_getchar
-<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
+<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_getchar
+<LI><a href="#[183]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tab_complete
 </UL>
 <BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cli_main
 </UL>
 
-<P><STRONG><a name="[186]"></a>print_bad_command</STRONG> (Thumb, 228 bytes, Stack size 16 bytes, cli.o(.text))
+<P><STRONG><a name="[187]"></a>print_bad_command</STRONG> (Thumb, 228 bytes, Stack size 16 bytes, cli.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192 + Unknown Stack Size
 <LI>Call Chain = print_bad_command &rArr; csp_printf &rArr; aos_mutex_lock &rArr; krhino_mutex_lock &rArr; pend_to_blk_obj &rArr; tick_list_insert &rArr; tick_list_pri_insert
 </UL>
@@ -3596,11 +3615,11 @@ Local Symbols
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_task_exit
 <LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
 <LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_get_tag
-<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
-<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
-<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_bad_command
-<LI><a href="#[184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
-<LI><a href="#[181]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[186]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncpy
+<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;print_bad_command
+<LI><a href="#[185]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_input
+<LI><a href="#[182]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;handle_input
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cli.o(.text)
 </UL>
@@ -3628,7 +3647,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
 <LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_get_tag
-<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<LI><a href="#[17d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cli.o(.constdata)
 </UL>
@@ -3679,8 +3698,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[144]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;csp_printf
 <LI><a href="#[143]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_cli_get_tag
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
-<LI><a href="#[17e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<LI><a href="#[17c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strncmp
+<LI><a href="#[17f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy4
 <LI><a href="#[190]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aos_set_log_level
 </UL>
@@ -3716,34 +3735,34 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;uart1_init
 </UL>
 
-<P><STRONG><a name="[1b0]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
+<P><STRONG><a name="[1b1]"></a>_fp_digits</STRONG> (Thumb, 366 bytes, Stack size 64 bytes, printfa.o(i._fp_digits), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[1a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[1a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
-<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
-<LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
+<LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[1ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[1a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<LI><a href="#[1ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2ulz
+<LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[1ae]"></a>_printf_core</STRONG> (Thumb, 1744 bytes, Stack size 136 bytes, printfa.o(i._printf_core), UNUSED)
+<P><STRONG><a name="[1af]"></a>_printf_core</STRONG> (Thumb, 1744 bytes, Stack size 136 bytes, printfa.o(i._printf_core), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
-<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
-<LI><a href="#[1b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
-<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
-<LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
+<LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<LI><a href="#[1b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_pre_padding
+<LI><a href="#[1b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_post_padding
+<LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 </UL>
-<BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0vprintf
-<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf
-</UL>
-
-<P><STRONG><a name="[1b3]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printfa.o(i._printf_post_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<BR>[Called By]<UL><LI><a href="#[1b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0vprintf
+<LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0printf
 </UL>
 
-<P><STRONG><a name="[1b2]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i._printf_pre_padding), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[1ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[1b4]"></a>_printf_post_padding</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, printfa.o(i._printf_post_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+</UL>
+
+<P><STRONG><a name="[1b3]"></a>_printf_pre_padding</STRONG> (Thumb, 46 bytes, Stack size 24 bytes, printfa.o(i._printf_pre_padding), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 <P>
 <H3>

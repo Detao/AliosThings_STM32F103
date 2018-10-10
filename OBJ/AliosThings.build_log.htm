@@ -28,10 +28,15 @@ Project File Date:  10/09/2018
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'D:\Keil\ARM\ARMCC\Bin'
 Build target 'USART'
 compiling hal_uart_stm32.c...
+..\AliOS-Things-master\platform\mcu\stm32f103\hal\hal_uart_stm32.c(40): warning:  #177-D: variable "rx_count"  was declared but never referenced
+      uint32_t rx_count = 0;
+..\AliOS-Things-master\platform\mcu\stm32f103\hal\hal_uart_stm32.c(415): warning:  #1-D: last line of file ends without a newline
+  #endif  /*uart recive enable*/
+..\AliOS-Things-master\platform\mcu\stm32f103\hal\hal_uart_stm32.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=44464 RO-data=992 RW-data=200 ZI-data=36952  
+Program Size: Code=44724 RO-data=992 RW-data=208 ZI-data=36072  
 FromELF: creating hex file...
-"..\OBJ\AliosThings.axf" - 0 Error(s), 0 Warning(s).
+"..\OBJ\AliosThings.axf" - 0 Error(s), 2 Warning(s).
 
 <h2>Software Packages used:</h2>
 
