@@ -21,6 +21,7 @@ static kinit_t kinit;
 extern int application_start(int argc, char **argv);
 extern int aos_framework_init(void);
 extern void board_init(void);
+extern void aos_heap_set(void);
 
 static void var_init()
 {
@@ -29,23 +30,15 @@ static void var_init()
     kinit.cli_enable = 1;
 }
 
-extern void hw_start_hal(void);
-
+extern void stm32_soc_init(void);
 #include "hal/soc/uart.h"
-#include "hal/hal_uart_stm32f4.h"
-#include "board.h"
 
 static void sys_init(void)
 {
     stm32_soc_init();
-#ifdef BOOTLOADER
-    main();
-#else
-    hw_start_hal();
-    board_init();
     var_init();
-    aos_kernel_init(&kinit);
-#endif
+    //aos_kernel_init(&kinit);
+	  application_start(0, NULL);
 }
 
 

@@ -583,7 +583,7 @@ static void reboot_cmd(char *buf, int len, int argc, char **argv)
 {
     aos_cli_printf("reboot\r\n");
 
-    hal_reboot();
+//    hal_reboot();
 }
 
 static void uptime_cmd(char *buf, int len, int argc, char **argv)

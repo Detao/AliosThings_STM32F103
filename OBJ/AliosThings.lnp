@@ -40,6 +40,12 @@
 "..\obj\port_c.o"
 "..\obj\port_s.o"
 "..\obj\soc_impl.o"
+"..\obj\soc_init.o"
+"..\obj\aos.o"
+"..\obj\dumpsys.o"
+"..\obj\cli.o"
+"..\obj\log.o"
+"..\obj\hal_uart_stm32.o"
 --library_type=microlib --strict --scatter "..\OBJ\AliosThings.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

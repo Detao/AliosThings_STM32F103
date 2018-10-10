@@ -37,3 +37,9 @@
 ..\obj\k_mm_debug.o: ..\AliOS-Things-master\kernel\rhino\core\include\k_hook.h
 ..\obj\k_mm_debug.o: ..\AliOS-Things-master\platform\arch\arm\armv7m\armcc\m3\port.h
 ..\obj\k_mm_debug.o: ..\AliOS-Things-master\kernel\rhino\core\include\k_endian.h
+..\obj\k_mm_debug.o: ..\AliOS-Things-master\include\aos/types.h
+..\obj\k_mm_debug.o: ..\AliOS-Things-master\utility\libc\compilers\armlibc\unistd.h
+..\obj\k_mm_debug.o: ..\AliOS-Things-master\utility\libc\compilers\armlibc\sys/unistd.h
+..\obj\k_mm_debug.o: ..\AliOS-Things-master\utility\libc\compilers\armlibc\fcntl.h
+..\obj\k_mm_debug.o: ..\AliOS-Things-master\utility\libc\compilers\armlibc\sys/fcntl.h
+..\obj\k_mm_debug.o: ..\AliOS-Things-master\include\aos/cli.h
